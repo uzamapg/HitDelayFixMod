@@ -1,8 +1,13 @@
 {
-  "package": "${basePackage}.${modid}.mixin",
-  "plugin": "${basePackage}.${modid}.init.AutoDiscoveryMixinPlugin",
-  "refmap": "mixins.${modid}.refmap.json",
+  "package": "io.ghast.hitdelayfix.mixin",
+  "plugin": "io.ghast.hitdelayfix.init.AutoDiscoveryMixinPlugin",
+  "refmap": "mixins.hitdelayfix.refmap.json",
   "minVersion": "0.7",
   "compatibilityLevel": "JAVA_8",
-  "__comment": "You do not need to manually register mixins in this template. Check the auto discovery mixin plugin for more info."
+  "required": true,
+  "priority": 1001,
+  "mixins": [
+    "MixinMinecraft"
+  ],
+  "__comment": "Removes 1.8.9 vanilla hit delay for faster combat"
 }
